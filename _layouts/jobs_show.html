@@ -1,0 +1,65 @@
+---
+layout: jobs
+---
+
+{% assign job = page %}
+<div class="container" style='font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif'>
+    <div class="row">
+        <div class="col-xs-12">
+            <a href="/jobs">< Back</a>
+            <div class="page-header">
+                <h1>{{ job.title }} <small>{{ job.location }}</small></h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6">
+            {% for tag in job.tags %}
+            {% job_tag tag %}
+            {% endfor %}
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-xs-12">
+            <p>{{ job.company_overview | markdownify }}</p>
+            <!--<p><%= Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(t :default_company_overview).html_safe %></p>-->
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>{{ job.content | markdownify }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>{{ job.why_here | markdownify }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>{{ job.how_to_apply | markdownify }}</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <p style="white-space: pre-line">
+                Happy Coding,
+                DWork's Team
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <a class="btn btn-danger" href="mailto:team@dwork.vn?subject=[{{job.title | slugify}}] Put your name here">Apply now!</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <small>Last updated: {{ job.date | date_to_string}}</small>
+        </div>
+    </div>
+</div>

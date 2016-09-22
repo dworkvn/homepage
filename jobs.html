@@ -1,0 +1,39 @@
+---
+title: Jobs
+permalink: /jobs/
+layout: jobs
+---
+<section>
+    <div class="container">
+        <div class="col-md-12 text-center">
+            <h1 style="margin: 40px">Openning Jobs</h1>
+        </div>
+        <table class="table striped-row">
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Location</th>
+                <th>Updated At</th>
+            </tr>
+            </thead>
+
+            <tbody class="table-hover">
+            {% assign jobs = site.jobs | sort: 'date' | reverse %}
+            {% for job in jobs %}
+            <tr>
+                <td>
+                    <span><a href="{{ job.url }}">{{ job.title }}</a></span>
+                    {% for tag in job.tags %}
+                    {% job_tag tag %}
+                    {% endfor %}
+                </td>
+                <td>{{ job.location }}</td>
+                <td>{{ job.date | date_to_string }}</td>
+            </tr>
+            {% endfor %}
+            
+            </tbody>
+        </table>
+        <br>
+    </div>
+</section>

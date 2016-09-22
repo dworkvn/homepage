@@ -1,0 +1,114 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing these this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: DWORK Co., ltd
+email: contact@dwork.vn
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://dwork.vn" # the base hostname & protocol for your site
+collections:
+  jobs:
+    output: true
+    permalink: /jobs/:path/
+defaults:
+  - scope:
+      path: ""
+      type: jobs
+    values:
+      company_overview: |
+          ## Company Overview
+          DWORK has an exciting future ahead and you should join us if you want to be in it.
+
+          More will be disclosed when you're in
+
+          ### Our values
+
+          - `Experienced` enough to have confident
+          - `Motivated` enough to inspire others
+          - `Curious` enough to keep learning
+          - `Bold` enough to make a name for yourself
+
+      why_here: |
+          ## Why you'll love working here
+
+          - Competitive salary
+          - A workspace with great view to green Hoang Van Thu park (Yellow Flowers are there for fan boys too)
+          - A bunch of funny and motivated people
+          - Standing by window, sitting at desk, hugging the beanbag, lying on the floor. Free your style, bright your code
+          - SNACKS!
+
+          ## Why you'll hate working here
+
+          - Join foosball world's champion
+          - Fat boss
+          - Cute Office/HR/Finance manager
+          - Naughty dog
+          - Get fat
+
+      how_to_apply: |
+          ## How to apply?
+          You can prove yourself through Github, ziped source code, portfolio
+
+          Email to us at `team@dwork.vn` with title is  `[job_title] Your Name`
+      layout: jobs_show
+
+exclude:
+  - '*.iml'
+  - Gemfile.*
+  - Gemfile
+# Build settings
+markdown: kramdown
+gems:
+  - jekyll-assets
+assets:
+#  compress:
+#    css: false | true | default - development: false, production: true
+#    js: false | true | default - development: false, production: true
+
+  autowrite: true
+#  cache: false | directory | default: .asset-cache
+#  cache_type: memory | filesystem | default: filesystem
+#  cdn: https://cdn.example.com
+#  skip_baseurl_with_cdn: false
+#  skip_prefix_with_cdn: false
+  prefix: "/assets"
+  digest: true
+
+  assets:
+    - "*.png"
+    - "*.jpg"
+    - "application.*"
+
+  #
+
+  sources:
+    - _assets/app/images/
+    - _assets/app/images/large/
+    - _assets/app/javascripts/
+    - _assets/app/stylesheets/
+    - _assets/app/fonts/
+    - _assets/vendor/images/
+    - _assets/vendor/javascripts/
+    - _assets/vendor/stylesheets/
+    - _assets/vendor/fonts/
+
+  features:
+    liquid: true
+    integrity: true
+#    automatic_img_size: true | false | n(fixnum): 2,4,6,8 | default: true
+#    automatic_img_alt : true | false | default: true

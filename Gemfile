@@ -18,6 +18,8 @@ gem "jekyll", "3.2.1"
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 # gem "github-pages", group: :jekyll_plugins
 
+gem "rake"
+
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   # gem "jekyll-github-metadata", "~> 1.0"

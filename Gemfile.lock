@@ -51,6 +51,7 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
+    rake (12.1.0)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
@@ -80,9 +81,10 @@ DEPENDENCIES
   jekyll (= 3.2.1)
   jekyll-admin
   jekyll-assets
+  rake
 
 RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.12.5
+   1.13.1

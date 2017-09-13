@@ -71,6 +71,7 @@ exclude:
   - '*.iml'
   - Gemfile.*
   - Gemfile
+  - vendor
 # Build settings
 markdown: kramdown
 plugins:
